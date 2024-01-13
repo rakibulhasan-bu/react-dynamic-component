@@ -294,11 +294,13 @@ const DynamicComponent = ({
 
                 <div
                   style={{ backgroundColor: bgcolor, borderColor }}
-                  className="max-w-28 bg-black md:max-w-52 lg:max-w-[240px] border md:border-2 rounded-lg md:rounded-2xl flex items-center pr-3 md:pr-[16px] pl-3 pt-[2px] pb-[5px]"
+                  className="max-w-28 md:max-w-52 lg:max-w-[240px] border md:border-2 rounded-lg md:rounded-2xl flex items-center pr-3 md:pr-[16px] pl-3 pt-[2px] pb-[5px]"
                 >
                   <Icon
                     style={{ color }}
-                    className={`text-2xl md:text-4xl lg:text-6xl`}
+                    className={`text-2xl md:text-4xl ${
+                      length === 5 ? "lg:text-5xl" : "lg:text-6xl"
+                    } `}
                   />
                   <div className="text-center ml-1 md:ml-3">
                     <h2
