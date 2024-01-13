@@ -1,21 +1,22 @@
 /* eslint-disable react/prop-types */
 import "./DynamicComponent.css";
-import middleIcon from "./assets/icon-1.svg";
-import retailerIcon from "./assets/retailer-icon.svg";
-import partnerIcon from "./assets/partner-icon.svg";
-import arrow1 from "./assets/arrow-1.svg";
-import arrow3 from "./assets/arrow-3.svg";
-import arrow4 from "./assets/arrow-4.svg";
-import arrow5 from "./assets/arrow-5.svg";
-import bg1 from "./assets/bg-card.png";
-import bg2 from "./assets/bg-card2.png";
-import dataIcon from "./assets/data-icon.svg";
-import optionalIcon from "./assets/optional.svg";
-import scienceIcon from "./assets/science-icon.svg";
-import Icon2 from "./assets/icon-2.svg";
 
-const DynamicComponent = ({ heading }) => {
-  console.log(bg1);
+const DynamicComponent = ({
+  heading,
+  middleIcon,
+  dataIcon,
+  retailerIcon,
+  partnerIcon,
+  optionalIcon,
+  scienceIcon,
+  retailerBg,
+  searchIcon,
+  dataBg,
+  arrow1,
+  arrow3,
+  arrow4,
+  arrow5,
+}) => {
   return (
     <div className="max-w-[800px] mx-auto text-center mt-5">
       {/* this is heading text  */}
@@ -32,7 +33,7 @@ const DynamicComponent = ({ heading }) => {
               className={`max-w-[240px] w-full relative flex items-center pr-[30px] p-3 pt-[27px] pb-[33px]`}
             >
               <div className="w-full h-full absolute top-0 left-0 z-0">
-                <img src={bg1} alt="" className="w-full h-full" />
+                <img src={retailerBg} alt="" className="w-full h-full" />
               </div>
               <img src={retailerIcon} alt="" className="z-10" />
               <div className="text-center ml-3 z-10">
@@ -54,7 +55,7 @@ const DynamicComponent = ({ heading }) => {
               className={`max-w-[240px] w-full mt-[27px] relative flex items-center pr-16 p-3 pt-[27px] pb-4`}
             >
               <div className="w-full h-full absolute top-0 left-0 z-0">
-                <img src={bg2} alt="" className="w-full h-full" />
+                <img src={dataBg} alt="" className="w-full h-full" />
               </div>
               <img src={dataIcon} className="w-[54px] pt-2 ml-5 z-10" alt="" />
               <div className="text-center ml-3 z-10">
@@ -97,7 +98,7 @@ const DynamicComponent = ({ heading }) => {
               <img src={arrow3} alt="" />
             </div>
             <div className="max-w-[240px] w-full bg-gray-1000 border-2 rounded-2xl border-green-1100 flex items-center pr-5 pl-3 py-1">
-              <img src={Icon2} alt="" />
+              <img src={searchIcon} alt="" />
               <div className="text-center ml-3">
                 <h2 className="text-green-1000 leading-5 font-bold font-sans text-lg">
                   BI + Reporting
