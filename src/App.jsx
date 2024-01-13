@@ -14,9 +14,9 @@ import { MdSocialDistance } from "react-icons/md";
 
 function App() {
   const heading = "How it Works";
-  const color = "#fff000";
-  const bgcolor = "#35F4D9";
-  const borderColor = "#DC143C";
+  const color = "#3D5B2B";
+  const bgcolor = "#F1F4D9";
+  const borderColor = "#3D5B2B";
   const leftTopComponent = {
     text: "Retailer Data",
     icon: GiIndianPalace,
