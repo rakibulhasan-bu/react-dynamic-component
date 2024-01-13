@@ -13,27 +13,30 @@ const DynamicComponent = ({
 }) => {
   const LeftTopIcon = leftTopComponent?.icon;
   const LeftBottomIcon = leftBottomComponent?.icon;
+  const length = rightSideComponents.length;
   return (
-    <div className="max-w-[800px] mx-auto text-center mt-5">
+    <div className="md:max-w-[800px] overflow-hidden  mx-auto text-center mt-5 px-2 pb-5 md:px-3 lg:px-0">
       {/* this is heading text  */}
-      <h2 style={{ color }} className="font-bold font-sans text-4xl">
+      <h2
+        style={{ color }}
+        className="w-full font-bold text-center font-sans text-2xl md:text-4xl"
+      >
         {heading}
       </h2>
 
       {/* this is main div  */}
-      <div className="flex items-center mt-10">
+      <div className="w-full flex items-center mx-auto mt-3 md:mt-5 lg:mt-10">
         {/* this is left div  */}
         <div className="relative">
           <div className="flex relative">
             <div
-              className={`max-w-[240px] w-full relative flex items-center pr-[30px] p-3 pt-[27px] pb-[33px]`}
+              className={`max-w-32 md:max-w-48 lg:max-w-[240px] relative flex items-center lg:pr-[30px] p-3 md:pt-5 lg:pt-[27px] pb-[33px]`}
             >
-              <div className="w-full h-full absolute top-0 left-0 z-0">
+              <div className=" absolute top-0 left-0 z-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 249 133"
-                  width={210}
-                  height={130}
+                  className="w-32 md:w-48 lg:w-[210px] lg:h-[130px]"
                 >
                   <g fill="none" stroke={color} strokeWidth="2">
                     <path
@@ -75,22 +78,24 @@ const DynamicComponent = ({
               <LeftTopIcon
                 style={{ color }}
                 alt=""
-                className={`z-10 text-7xl`}
+                className={`z-10 text-4xl md:text-7xl`}
               />
               <div className="text-center ml-2 z-10">
-                <h2 style={{ color }} className="font-bold font-sans text-xl">
+                <h2
+                  style={{ color }}
+                  className="font-bold font-sans text-sm md:text-xl"
+                >
                   {leftTopComponent?.text}
                 </h2>
               </div>
             </div>
 
-            <div className="absolute bottom-10 right-[-75px]">
+            <div className="absolute bottom-10 -right-7 md:right-[-60px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="70"
-                height="40"
                 fill="none"
                 viewBox="0 0 59 30"
+                className="w-8 md:w-[70px] h-5 md:h-10"
               >
                 <path
                   fill={color}
@@ -102,10 +107,14 @@ const DynamicComponent = ({
 
           <div className="flex relative">
             <div
-              className={`max-w-[240px] w-full mt-[27px] relative flex items-center pr-16 p-3 pt-[27px] pb-4`}
+              className={`max-w-32 md:max-w-48 lg:max-w-[240px] mt-5 lg:mt-[27px] relative flex items-center lg:pr-16 p-3 lg:pt-[27px] pb-4`}
             >
-              <div className="w-full h-full absolute top-0 left-0 z-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 253 136">
+              <div className="w-full absolute top-0 left-0 z-0">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 253 136"
+                  className="w-32  md:w-48 lg:w-[210px] lg:h-[130px]"
+                >
                   <g fill="none" stroke={color} strokeWidth="2">
                     <path
                       d="M13.25 3.78C6.55 6.61 1.96 13.03 1.98 20.35q.09 33.9-.05 66.05c-.03 7.44 2.34 13.5 8.57 17.43a.25.25 0 00.38-.23Q9.71 73.93 8.61 44.51q-.44-11.62-.14-13.5c1.37-8.7 9.01-16.4 18.23-16.76q94.09-3.64 188.88-7.24c.98-.04 2.03.25 3.03.35q.94.09.21-.51-5.39-4.39-11.93-4.38-89.8.11-183.82-.05-6.58-.01-9.82 1.36"
@@ -143,24 +152,25 @@ const DynamicComponent = ({
                   ></rect>
                 </svg>
               </div>
-              <div className="text-center flex ml-3 z-10">
+              <div className="text-center flex md:ml-3 z-10">
                 <LeftBottomIcon
                   style={{ color }}
-                  className={`text-7xl pt-2 ml-3 z-10`}
+                  className={`text-5xl lg:text-7xl lg:pt-2 ml-1 lg:ml-3 z-10`}
                 />
-                <h2 style={{ color }} className="font-bold font-sans text-xl">
+                <h2
+                  style={{ color }}
+                  className="font-bold font-sans pt-1 text-xs md:text-xl"
+                >
                   {leftBottomComponent?.text}
                 </h2>
               </div>
             </div>
-            <div className="absolute top-[30px] right-[-72px]">
+            <div className="absolute top-[30px] -right-7 md:right-[-60px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="70"
-                height="40"
                 fill="none"
                 viewBox="0 0 59 30"
-                className="scale-y-[-1]"
+                className="w-8 md:w-[70px] h-5 md:h-[40px] scale-y-[-1]"
               >
                 <path
                   fill={color}
@@ -174,24 +184,25 @@ const DynamicComponent = ({
         {/* this is middle div  */}
         <div
           style={{ backgroundColor: bgcolor, borderColor }}
-          className="ml-[100px] px-[34px] py-[18px] rounded-xl border-2"
+          className="ml-6 md:ml-16 lg:ml-[70px] px-3 md:px-[34px] py-2 md:py-[18px] rounded-md md:rounded-xl border md:border-2"
         >
           {/* <img src={middleIcon} alt="" /> */}
-          <MiddleIcon style={{ color }} className={`text-9xl`} />
+          <MiddleIcon
+            style={{ color }}
+            className={`text-6xl md:text-8xl lg:text-9xl`}
+          />
         </div>
 
         {/* this is right div  */}
-        <div className="relative ml-[88px]">
+        <div className="relative ml-8 md:ml-16 lg:ml-[88px]">
           {rightSideComponents?.map((singleDiv, index) => {
             const Icon = singleDiv?.icon;
             return (
               <div key={singleDiv?.text1} className="flex mb-2 relative">
-                {(index === 1 || index === 2) && (
+                {(length === 1 || length === 2) && index === 0 && (
                   <svg
-                    className="absolute top-5 z-10 left-[-75px] scale-y-[-1]"
+                    className="absolute w-8 md:w-14 lg:w-16 h-4 md:h-6 top-5 z-10 -left-8 md:-left-16 lg:left-[-75px] scale-y-[-1]"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="65"
-                    height="23"
                     fill="none"
                     viewBox="0 0 65 23"
                   >
@@ -201,12 +212,50 @@ const DynamicComponent = ({
                     ></path>
                   </svg>
                 )}
-                {rightSideComponents.length === 1 && index === 0 && (
+
+                {(length === 4 || length === 5) && index === 0 && (
                   <svg
-                    className="absolute top-5 z-10 left-[-75px] scale-y-[-1]"
+                    className="absolute h-4 md:h-7 lg:h-[50px] w-8 md:w-14 lg:w-[72px] top-7 z-10 -left-8 md:-left-16 lg:left-[-80px] scale-y-[-1]"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="65"
-                    height="23"
+                    viewBox="0 0 59 30"
+                  >
+                    <path
+                      fill={color}
+                      d="M52.91 24.41q-6.58-4.75-13.86-8.99C27.69 8.79 15.65 6.15 1.88 3.34Q.4 3.04.57 1.55q.02-.18.08-.35Q1.07.09 2.23.32q12.73 2.54 22.33 5.41c11.13 3.32 20.73 9.54 29.9 16.3q.66.49.51-.32l-1.63-8.56q-.28-1.45.98-2.2.21-.13.45-.15 1.16-.12 1.38 1.03l2.54 13.27a1.64 1.64 0 01-1.28 1.91l-13.37 2.78a1.07 1.06-29.7 01-.93-.25q-.57-.52-.57-1.13.01-1.42 1.4-1.69l8.84-1.71q.76-.15.13-.6z"
+                    ></path>
+                  </svg>
+                )}
+
+                {index === 1 && (
+                  <svg
+                    className="absolute w-8 md:w-14 lg:w-16 h-4 md:h-6  top-5 z-10 -left-8 md:-left-16 lg:left-[-75px] scale-y-[-1]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 65 23"
+                  >
+                    <path
+                      fill={color}
+                      d="M64.061 12.56a1.502 1.502 0 000-2.121L54.515.893a1.502 1.502 0 00-2.122 0 1.502 1.502 0 000 2.122l8.486 8.485-8.486 8.485a1.502 1.502 0 000 2.122 1.502 1.502 0 002.122 0l9.546-9.546zM0 13h63v-3H0v3z"
+                    ></path>
+                  </svg>
+                )}
+
+                {length === 3 && index === 0 && (
+                  <svg
+                    className="absolute h-4 md:h-7 lg:h-[50px] w-8 md:w-14 lg:w-[72px] top-7 z-10 -left-8 md:-left-16 lg:left-[-80px] scale-y-[-1]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 59 30"
+                  >
+                    <path
+                      fill={color}
+                      d="M52.91 24.41q-6.58-4.75-13.86-8.99C27.69 8.79 15.65 6.15 1.88 3.34Q.4 3.04.57 1.55q.02-.18.08-.35Q1.07.09 2.23.32q12.73 2.54 22.33 5.41c11.13 3.32 20.73 9.54 29.9 16.3q.66.49.51-.32l-1.63-8.56q-.28-1.45.98-2.2.21-.13.45-.15 1.16-.12 1.38 1.03l2.54 13.27a1.64 1.64 0 01-1.28 1.91l-13.37 2.78a1.07 1.06-29.7 01-.93-.25q-.57-.52-.57-1.13.01-1.42 1.4-1.69l8.84-1.71q.76-.15.13-.6z"
+                    ></path>
+                  </svg>
+                )}
+                {index === 2 && (
+                  <svg
+                    className="absolute w-8 md:w-14 lg:w-16 h-4 md:h-6  top-5 z-10 -left-8 md:-left-16 lg:left-[-75px] scale-y-[-1]"
+                    xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 65 23"
                   >
@@ -219,9 +268,7 @@ const DynamicComponent = ({
 
                 {index === 3 && (
                   <svg
-                    className="absolute top-0 z-10 left-[-75px] "
-                    width={70}
-                    height={50}
+                    className="absolute  w-8 md:w-14 lg:w-[70px] h-4 md:h-[50px]  top-0 z-10 -left-8 md:-left-16 lg:left-[-75px] "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 59 30"
                   >
@@ -232,11 +279,9 @@ const DynamicComponent = ({
                   </svg>
                 )}
 
-                {rightSideComponents.length === 4 && index === 0 && (
+                {index === 4 && (
                   <svg
-                    className="absolute top-7 z-10 left-[-80px] scale-y-[-1]"
-                    width={72}
-                    height={50}
+                    className="absolute  w-8 md:w-14 lg:w-[78px] h-4 md:h-[50px] lg:h-[40px]  top-0 z-10 -left-8 md:-left-16 lg:left-[-78px] "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 59 30"
                   >
@@ -249,13 +294,16 @@ const DynamicComponent = ({
 
                 <div
                   style={{ backgroundColor: bgcolor, borderColor }}
-                  className="max-w-[240px] w-full border-2 rounded-2xl flex items-center pr-[16px] pl-3 pt-[2px] pb-[7px]"
+                  className="max-w-28 bg-black md:max-w-52 lg:max-w-[240px] border md:border-2 rounded-lg md:rounded-2xl flex items-center pr-3 md:pr-[16px] pl-3 pt-[2px] pb-[5px]"
                 >
-                  <Icon style={{ color }} className={`text-6xl`} />
-                  <div className="text-center ml-3">
+                  <Icon
+                    style={{ color }}
+                    className={`text-2xl md:text-4xl lg:text-6xl`}
+                  />
+                  <div className="text-center ml-1 md:ml-3">
                     <h2
                       style={{ color }}
-                      className="leading-5 font-bold font-sans text-lg"
+                      className="lg:leading-5 font-bold font-sans text-[10px] md:text-base lg:text-lg"
                     >
                       {singleDiv?.text}
                     </h2>

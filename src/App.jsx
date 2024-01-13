@@ -40,6 +40,10 @@ function App() {
       text: "External Partners",
       icon: GiAnatomy,
     },
+    {
+      text: "External Partners",
+      icon: GiAnatomy,
+    },
   ];
 
   return (
