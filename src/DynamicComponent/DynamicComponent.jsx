@@ -4,7 +4,6 @@ import middleIcon from "./assets/icon-1.svg";
 import retailerIcon from "./assets/retailer-icon.svg";
 import partnerIcon from "./assets/partner-icon.svg";
 import arrow1 from "./assets/arrow-1.svg";
-import arrow2 from "./assets/arrow-2.svg";
 import arrow3 from "./assets/arrow-3.svg";
 import arrow4 from "./assets/arrow-4.svg";
 import arrow5 from "./assets/arrow-5.svg";
@@ -16,6 +15,7 @@ import scienceIcon from "./assets/science-icon.svg";
 import Icon2 from "./assets/icon-2.svg";
 
 const DynamicComponent = ({ heading }) => {
+  console.log(bg1);
   return (
     <div className="max-w-[800px] mx-auto text-center mt-5">
       {/* this is heading text  */}
@@ -29,10 +29,13 @@ const DynamicComponent = ({ heading }) => {
         <div className="relative">
           <div className="flex relative">
             <div
-              className={`max-w-[240px] w-full bg-[url('./assets/bg-card.png')] relative bg-no-repeat bg-[length:100%_100%] flex items-center pr-[30px] p-3 pt-[27px] pb-[33px]`}
+              className={`max-w-[240px] w-full relative flex items-center pr-[30px] p-3 pt-[27px] pb-[33px]`}
             >
-              <img src={retailerIcon} alt="" />
-              <div className="text-center ml-3">
+              <div className="w-full h-full absolute top-0 left-0 z-0">
+                <img src={bg1} alt="" className="w-full h-full" />
+              </div>
+              <img src={retailerIcon} alt="" className="z-10" />
+              <div className="text-center ml-3 z-10">
                 <h2 className="text-green-1000 font-bold font-sans text-xl">
                   Retailer
                   <br />
@@ -40,16 +43,21 @@ const DynamicComponent = ({ heading }) => {
                 </h2>
               </div>
             </div>
+
             <div className="absolute bottom-10 right-[-75px]">
               <img src={arrow1} className="w-[73px]" alt="" />
             </div>
           </div>
+
           <div className="flex relative">
             <div
-              className={`max-w-[240px] w-full mt-[27px] bg-[url(${bg2})] relative bg-no-repeat bg-[length:100%_100%] flex items-center pr-16 p-3 pt-[27px] pb-4`}
+              className={`max-w-[240px] w-full mt-[27px] relative flex items-center pr-16 p-3 pt-[27px] pb-4`}
             >
-              <img src={dataIcon} className="w-[54px] pt-2 ml-5" alt="" />
-              <div className="text-center ml-3">
+              <div className="w-full h-full absolute top-0 left-0 z-0">
+                <img src={bg2} alt="" className="w-full h-full" />
+              </div>
+              <img src={dataIcon} className="w-[54px] pt-2 ml-5 z-10" alt="" />
+              <div className="text-center ml-3 z-10">
                 <h2 className="text-green-1000 font-bold font-sans text-xl">
                   Distributer <br />
                   Data
