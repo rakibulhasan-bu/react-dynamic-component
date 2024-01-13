@@ -1,16 +1,12 @@
 import DynamicComponent from "./DynamicComponent/DynamicComponent";
 
-import partnerIcon from "./DynamicComponent/assets/partner-icon.svg";
-import optionalIcon from "./DynamicComponent/assets/optional.svg";
-import scienceIcon from "./DynamicComponent/assets/science-icon.svg";
-import searchIcon from "./DynamicComponent/assets/icon-2.svg";
-import arrow3 from "./DynamicComponent/assets/arrow-3.svg";
-import arrow4 from "./DynamicComponent/assets/arrow-4.svg";
-import arrow5 from "./DynamicComponent/assets/arrow-5.svg";
-
 import { SiDask } from "react-icons/si";
 import { GiIndianPalace } from "react-icons/gi";
 import { MdSocialDistance } from "react-icons/md";
+import { SiReacttable } from "react-icons/si";
+import { SiGooglesearchconsole } from "react-icons/si";
+import { AiOutlineApartment } from "react-icons/ai";
+import { GiAnatomy } from "react-icons/gi";
 
 function App() {
   const heading = "How it Works";
@@ -30,23 +26,19 @@ function App() {
   const rightSideComponents = [
     {
       text: "Internal Operations",
-      icon: optionalIcon,
-      arrow: arrow4,
+      icon: AiOutlineApartment,
     },
     {
       text: "BI + Reporting",
-      icon: searchIcon,
-      arrow: arrow3,
+      icon: SiGooglesearchconsole,
     },
     {
       text: "Analytics + Data Science",
-      icon: scienceIcon,
-      arrow: arrow5,
+      icon: SiReacttable,
     },
     {
       text: "External Partners",
-      icon: partnerIcon,
-      arrow: arrow5,
+      icon: GiAnatomy,
     },
   ];
 

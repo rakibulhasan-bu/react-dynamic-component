@@ -72,7 +72,11 @@ const DynamicComponent = ({
                   ></path>
                 </svg>
               </div>
-              <LeftTopIcon alt="" className={`z-10 text-7xl text-[${color}]`} />
+              <LeftTopIcon
+                style={{ color }}
+                alt=""
+                className={`z-10 text-7xl`}
+              />
               <div className="text-center ml-2 z-10">
                 <h2 style={{ color }} className="font-bold font-sans text-xl">
                   {leftTopComponent?.text}
@@ -89,7 +93,7 @@ const DynamicComponent = ({
                 viewBox="0 0 59 30"
               >
                 <path
-                  fill={borderColor}
+                  fill={color}
                   d="M2.33.264A1.5 1.5 0 101.67 3.19L2.33.264zm55.21 26.84a1.5 1.5 0 001.193-1.755L56.2 12.089a1.501 1.501 0 00-2.947.563l2.25 11.787-11.786 2.25a1.5 1.5 0 10.563 2.948l13.26-2.533zM1.67 3.19l15.28 3.46.662-2.925L2.33.264 1.669 3.19zM43.84 18.329l12.576 8.543 1.686-2.482-12.576-8.543-1.686 2.482zM16.949 6.65A78.838 78.838 0 0143.84 18.329l1.686-2.482A81.864 81.864 0 0017.61 3.725l-.662 2.926z"
                 ></path>
               </svg>
@@ -141,7 +145,8 @@ const DynamicComponent = ({
               </div>
               <div className="text-center flex ml-3 z-10">
                 <LeftBottomIcon
-                  className={`text-7xl text-[${color}] pt-2 ml-3 z-10`}
+                  style={{ color }}
+                  className={`text-7xl pt-2 ml-3 z-10`}
                 />
                 <h2 style={{ color }} className="font-bold font-sans text-xl">
                   {leftBottomComponent?.text}
@@ -158,7 +163,7 @@ const DynamicComponent = ({
                 className="scale-y-[-1]"
               >
                 <path
-                  fill={borderColor}
+                  fill={color}
                   d="M2.33.264A1.5 1.5 0 101.67 3.19L2.33.264zm55.21 26.84a1.5 1.5 0 001.193-1.755L56.2 12.089a1.501 1.501 0 00-2.947.563l2.25 11.787-11.786 2.25a1.5 1.5 0 10.563 2.948l13.26-2.533zM1.67 3.19l15.28 3.46.662-2.925L2.33.264 1.669 3.19zM43.84 18.329l12.576 8.543 1.686-2.482-12.576-8.543-1.686 2.482zM16.949 6.65A78.838 78.838 0 0143.84 18.329l1.686-2.482A81.864 81.864 0 0017.61 3.725l-.662 2.926z"
                 ></path>
               </svg>
@@ -172,33 +177,93 @@ const DynamicComponent = ({
           className="ml-[100px] px-[34px] py-[18px] rounded-xl border-2"
         >
           {/* <img src={middleIcon} alt="" /> */}
-          <MiddleIcon className={`text-9xl text-[${color}]`} />
+          <MiddleIcon style={{ color }} className={`text-9xl`} />
         </div>
 
         {/* this is right div  */}
         <div className="relative ml-[88px]">
-          {rightSideComponents?.map((singleDiv, index) => (
-            <div key={singleDiv?.text1} className="flex mb-2 relative">
-              <div className={`absolute bottom-${index + 2} left-[-75px]`}>
-                <img src={singleDiv?.arrow} alt="" />
-              </div>
-
-              <div
-                style={{ backgroundColor: bgcolor, borderColor }}
-                className="max-w-[240px] w-full border-2 rounded-2xl flex items-center pr-[16px] pl-3 pt-[2px] pb-[7px]"
-              >
-                <img src={singleDiv?.icon} alt="" />
-                <div className="text-center ml-3">
-                  <h2
-                    style={{ color }}
-                    className="leading-5 font-bold font-sans text-lg"
+          {rightSideComponents?.map((singleDiv, index) => {
+            const Icon = singleDiv?.icon;
+            return (
+              <div key={singleDiv?.text1} className="flex mb-2 relative">
+                {(index === 1 || index === 2) && (
+                  <svg
+                    className="absolute top-5 z-10 left-[-75px] scale-y-[-1]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="65"
+                    height="23"
+                    fill="none"
+                    viewBox="0 0 65 23"
                   >
-                    {singleDiv?.text}
-                  </h2>
+                    <path
+                      fill={color}
+                      d="M64.061 12.56a1.502 1.502 0 000-2.121L54.515.893a1.502 1.502 0 00-2.122 0 1.502 1.502 0 000 2.122l8.486 8.485-8.486 8.485a1.502 1.502 0 000 2.122 1.502 1.502 0 002.122 0l9.546-9.546zM0 13h63v-3H0v3z"
+                    ></path>
+                  </svg>
+                )}
+                {rightSideComponents.length === 1 && index === 0 && (
+                  <svg
+                    className="absolute top-5 z-10 left-[-75px] scale-y-[-1]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="65"
+                    height="23"
+                    fill="none"
+                    viewBox="0 0 65 23"
+                  >
+                    <path
+                      fill={color}
+                      d="M64.061 12.56a1.502 1.502 0 000-2.121L54.515.893a1.502 1.502 0 00-2.122 0 1.502 1.502 0 000 2.122l8.486 8.485-8.486 8.485a1.502 1.502 0 000 2.122 1.502 1.502 0 002.122 0l9.546-9.546zM0 13h63v-3H0v3z"
+                    ></path>
+                  </svg>
+                )}
+
+                {index === 3 && (
+                  <svg
+                    className="absolute top-0 z-10 left-[-75px] "
+                    width={70}
+                    height={50}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 59 30"
+                  >
+                    <path
+                      fill={color}
+                      d="M52.91 24.41q-6.58-4.75-13.86-8.99C27.69 8.79 15.65 6.15 1.88 3.34Q.4 3.04.57 1.55q.02-.18.08-.35Q1.07.09 2.23.32q12.73 2.54 22.33 5.41c11.13 3.32 20.73 9.54 29.9 16.3q.66.49.51-.32l-1.63-8.56q-.28-1.45.98-2.2.21-.13.45-.15 1.16-.12 1.38 1.03l2.54 13.27a1.64 1.64 0 01-1.28 1.91l-13.37 2.78a1.07 1.06-29.7 01-.93-.25q-.57-.52-.57-1.13.01-1.42 1.4-1.69l8.84-1.71q.76-.15.13-.6z"
+                    ></path>
+                  </svg>
+                )}
+
+                {rightSideComponents.length === 4 && index === 0 && (
+                  <svg
+                    className="absolute top-7 z-10 left-[-80px] scale-y-[-1]"
+                    width={72}
+                    height={50}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 59 30"
+                  >
+                    <path
+                      fill={color}
+                      d="M52.91 24.41q-6.58-4.75-13.86-8.99C27.69 8.79 15.65 6.15 1.88 3.34Q.4 3.04.57 1.55q.02-.18.08-.35Q1.07.09 2.23.32q12.73 2.54 22.33 5.41c11.13 3.32 20.73 9.54 29.9 16.3q.66.49.51-.32l-1.63-8.56q-.28-1.45.98-2.2.21-.13.45-.15 1.16-.12 1.38 1.03l2.54 13.27a1.64 1.64 0 01-1.28 1.91l-13.37 2.78a1.07 1.06-29.7 01-.93-.25q-.57-.52-.57-1.13.01-1.42 1.4-1.69l8.84-1.71q.76-.15.13-.6z"
+                    ></path>
+                  </svg>
+                )}
+
+                <div
+                  style={{ backgroundColor: bgcolor, borderColor }}
+                  className="max-w-[240px] w-full border-2 rounded-2xl flex items-center pr-[16px] pl-3 pt-[2px] pb-[7px]"
+                >
+                  <Icon style={{ color }} className={`text-6xl`} />
+                  <div className="text-center ml-3">
+                    <h2
+                      style={{ color }}
+                      className="leading-5 font-bold font-sans text-lg"
+                    >
+                      {singleDiv?.text}
+                    </h2>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
