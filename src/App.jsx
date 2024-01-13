@@ -1,41 +1,66 @@
 import DynamicComponent from "./DynamicComponent/DynamicComponent";
 
-import dataIcon from "./DynamicComponent/assets/data-icon.svg";
-import middleIcon from "./DynamicComponent/assets/icon-1.svg";
-import retailerIcon from "./DynamicComponent/assets/retailer-icon.svg";
 import partnerIcon from "./DynamicComponent/assets/partner-icon.svg";
 import optionalIcon from "./DynamicComponent/assets/optional.svg";
 import scienceIcon from "./DynamicComponent/assets/science-icon.svg";
-import retailerBg from "./DynamicComponent/assets/bg-card.png";
-import dataBg from "./DynamicComponent/assets/bg-card2.png";
 import searchIcon from "./DynamicComponent/assets/icon-2.svg";
-import arrow1 from "./DynamicComponent/assets/arrow-1.svg";
 import arrow3 from "./DynamicComponent/assets/arrow-3.svg";
 import arrow4 from "./DynamicComponent/assets/arrow-4.svg";
 import arrow5 from "./DynamicComponent/assets/arrow-5.svg";
 
+import { SiDask } from "react-icons/si";
+import { GiIndianPalace } from "react-icons/gi";
+import { MdSocialDistance } from "react-icons/md";
+
 function App() {
   const heading = "How it Works";
-  const color = "#284620";
+  const color = "#fff000";
+  const bgcolor = "#35F4D9";
+  const borderColor = "#DC143C";
+  const leftTopComponent = {
+    text: "Retailer Data",
+    icon: GiIndianPalace,
+  };
+
+  const leftBottomComponent = {
+    text: "Distributer Data",
+    icon: MdSocialDistance,
+  };
+
+  const rightSideComponents = [
+    {
+      text: "Internal Operations",
+      icon: optionalIcon,
+      arrow: arrow4,
+    },
+    {
+      text: "BI + Reporting",
+      icon: searchIcon,
+      arrow: arrow3,
+    },
+    {
+      text: "Analytics + Data Science",
+      icon: scienceIcon,
+      arrow: arrow5,
+    },
+    {
+      text: "External Partners",
+      icon: partnerIcon,
+      arrow: arrow5,
+    },
+  ];
 
   return (
     <div>
       <DynamicComponent
         heading={heading}
         color={color}
-        middleIcon={middleIcon}
-        dataIcon={dataIcon}
-        retailerIcon={retailerIcon}
-        partnerIcon={partnerIcon}
-        optionalIcon={optionalIcon}
-        scienceIcon={scienceIcon}
-        dataBg={dataBg}
-        retailerBg={retailerBg}
-        arrow1={arrow1}
-        arrow3={arrow3}
-        arrow4={arrow4}
-        arrow5={arrow5}
-        searchIcon={searchIcon}
+        bgcolor={bgcolor}
+        borderColor={borderColor}
+        leftTopComponent={leftTopComponent}
+        leftBottomComponent={leftBottomComponent}
+        rightSideComponents={rightSideComponents}
+        MiddleIcon={SiDask}
       />
     </div>
   );
