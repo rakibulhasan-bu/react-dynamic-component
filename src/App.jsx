@@ -14,6 +14,12 @@ function App() {
   const bgcolor = "#F1F4D9";
   const borderColor = "#3D5B2B";
 
+  const middleComponents = {
+    icon: SiDask,
+    textColor: "#3D5B65",
+    bgColor: "#000",
+    borderColor: "#fff000",
+  };
   const leftSideComponents = [
     {
       text: "Retailer Data",
@@ -113,7 +119,7 @@ function App() {
         borderColor={borderColor}
         leftSideComponents={leftSideComponents}
         rightSideComponents={rightSideComponents}
-        MiddleIcon={SiDask}
+        middleComponents={middleComponents}
       />
     </div>
   );

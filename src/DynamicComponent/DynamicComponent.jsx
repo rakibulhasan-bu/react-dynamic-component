@@ -6,10 +6,11 @@ const DynamicComponent = ({
   bgcolor,
   borderColor,
   heading,
-  MiddleIcon,
+  middleComponents,
   leftSideComponents,
   rightSideComponents,
 }) => {
+  const MiddleIcon = middleComponents?.icon;
   const length = rightSideComponents.length;
   const lengthLeft = leftSideComponents.length;
   return (
@@ -23,7 +24,7 @@ const DynamicComponent = ({
       </h2>
 
       {/* this is main div  */}
-      <div className="w-full flex items-center mx-auto mt-3 md:mt-5 lg:mt-10">
+      <div className="w-full flex items-center justify-center mx-auto mt-3 md:mt-5 lg:mt-10">
         {/* this is left div  */}
         <div className="relative">
           {leftSideComponents?.map((leftDiv, index) => {
@@ -42,9 +43,9 @@ const DynamicComponent = ({
                     <div
                       className={`${
                         lengthLeft >= 3
-                          ? "w-[120px] md:max-w-48 lg:max-w-[150px]"
+                          ? "w-[120px] md:w-[150px] lg:w-[150px]"
                           : "max-w-32 md:max-w-48 lg:max-w-[240px]"
-                      } relative flex items-center lg:mr-[30px] p-3 md:pt-5 pt-2 lg:pt-4 pb-[18px]`}
+                      } relative flex items-center p-3 md:pt-4 pt-2 lg:pt-4 pb-[18px]`}
                     >
                       <div className=" absolute top-0 left-0 z-0">
                         <svg
@@ -52,7 +53,7 @@ const DynamicComponent = ({
                           viewBox="0 0 249 133"
                           className={` ${
                             lengthLeft >= 3
-                              ? "w-[120px] md:w-48 lg:w-[150px] lg:h-[80px]"
+                              ? "w-[120px] md:w-[150px] lg:w-[150px] lg:h-[80px]"
                               : "w-32 md:w-48 lg:w-[170px] lg:h-[80px]"
                           }`}
                         >
@@ -148,9 +149,9 @@ const DynamicComponent = ({
                     <div
                       className={`${
                         lengthLeft >= 3
-                          ? "w-[120px] md:max-w-48 lg:max-w-[150px]"
+                          ? "w-[120px] md:w-[120px] lg:w-[150px]"
                           : "max-w-32 md:max-w-48 lg:max-w-[240px]"
-                      } relative flex items-center lg:pr-[30px] p-3 md:pt-5 pt-2 lg:pt-4 pb-[18px]`}
+                      } relative flex items-center p-3 md:pt-4 pt-2 lg:pt-4 pb-[18px]`}
                     >
                       <div className="w-full absolute top-0 left-0 z-0">
                         <svg
@@ -158,7 +159,7 @@ const DynamicComponent = ({
                           viewBox="0 0 253 136"
                           className={` ${
                             lengthLeft >= 3
-                              ? "w-[120px] md:w-48 lg:w-[150px] lg:h-[80px]"
+                              ? "w-[120px] md:w-[150px] lg:w-[150px] lg:h-[80px]"
                               : "w-32 md:w-48 lg:w-[170px] lg:h-[80px]"
                           }`}
                         >
@@ -256,12 +257,14 @@ const DynamicComponent = ({
 
         {/* this is middle div  */}
         <div
-          style={{ backgroundColor: bgcolor, borderColor }}
+          style={{
+            backgroundColor: middleComponents?.bgColor || bgcolor,
+            borderColor: middleComponents?.borderColor || borderColor,
+          }}
           className="ml-6 md:ml-16 lg:ml-[70px] px-3 md:px-[34px] py-2 md:py-[18px] rounded-md md:rounded-xl border md:border-2"
         >
-          {/* <img src={middleIcon} alt="" /> */}
           <MiddleIcon
-            style={{ color }}
+            style={{ color: middleComponents?.textColor }}
             className={`text-6xl md:text-8xl lg:text-9xl`}
           />
         </div>
