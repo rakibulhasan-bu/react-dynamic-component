@@ -44,7 +44,7 @@ const DynamicComponent = ({
                         lengthLeft >= 3
                           ? "w-[120px] md:max-w-48 lg:max-w-[150px]"
                           : "max-w-32 md:max-w-48 lg:max-w-[240px]"
-                      } relative flex items-center lg:pr-[30px] p-3 md:pt-5 pt-2 lg:pt-4 pb-[18px]`}
+                      } relative flex items-center lg:mr-[30px] p-3 md:pt-5 pt-2 lg:pt-4 pb-[18px]`}
                     >
                       <div className=" absolute top-0 left-0 z-0">
                         <svg
