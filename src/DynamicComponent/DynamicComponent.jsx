@@ -53,8 +53,8 @@ const DynamicComponent = ({
                           viewBox="0 0 249 133"
                           className={` ${
                             lengthLeft >= 3
-                              ? "w-[120px] md:w-[150px] lg:w-[150px] lg:h-[75px]"
-                              : "w-[120px] md:w-[150px] lg:w-[150px] lg:h-[75px]"
+                              ? "w-[120px] md:w-[150px] lg:w-[150px]  h-[60px] lg:h-[75px]"
+                              : "w-[120px] md:w-[150px] lg:w-[150px]  h-[60px] lg:h-[75px]"
                           }`}
                         >
                           <g
@@ -106,13 +106,13 @@ const DynamicComponent = ({
                             : "text-4xl md:text-5xl"
                         } `}
                       />
-                      <div className="text-center ml-2 z-10">
+                      <div className="text-center ml-1 z-10">
                         <h2
                           style={{ color: leftDiv?.textColor || textColor }}
                           className={`font-bold font-sans  ${
                             lengthLeft >= 3
-                              ? "text-xs md:text-base"
-                              : "text-sm md:text-base"
+                              ? "text-xs md:text-sm"
+                              : "text-xs md:text-sm"
                           }`}
                         >
                           {leftDiv?.text}
@@ -159,8 +159,8 @@ const DynamicComponent = ({
                           viewBox="0 0 253 136"
                           className={` ${
                             lengthLeft >= 3
-                              ? "w-[120px] md:w-[150px] lg:w-[150px] lg:h-[75px]"
-                              : "w-[120px] md:w-[150px] lg:w-[150px] lg:h-[75px]"
+                              ? "w-[120px] md:w-[150px] lg:w-[150px] h-[60px] lg:h-[75px]"
+                              : "w-[120px] md:w-[150px] lg:w-[150px] h-[60px] lg:h-[75px]"
                           }`}
                         >
                           <g
@@ -217,8 +217,8 @@ const DynamicComponent = ({
                           style={{ color: leftDiv?.textColor || textColor }}
                           className={`font-bold pt-1 lg:pt-0 font-sans  ${
                             lengthLeft >= 3
-                              ? "text-xs md:text-base"
-                              : "text-sm md:text-base"
+                              ? "text-xs md:text-sm"
+                              : "text-xs md:text-sm"
                           }`}
                         >
                           {leftDiv?.text}
