@@ -23,6 +23,33 @@ function App() {
     icon: MdSocialDistance,
   };
 
+  const leftSideComponents = [
+    {
+      text: "Distributer Data",
+      icon: MdSocialDistance,
+    },
+    {
+      text: "Distributer Data",
+      icon: MdSocialDistance,
+    },
+    {
+      text: "Distributer Data",
+      icon: MdSocialDistance,
+    },
+    {
+      text: "Distributer Data",
+      icon: MdSocialDistance,
+    },
+    {
+      text: "Distributer Data",
+      icon: MdSocialDistance,
+    },
+    {
+      text: "Distributer Data",
+      icon: MdSocialDistance,
+    },
+  ];
+
   const rightSideComponents = [
     {
       text: "Internal Operations",
@@ -44,6 +71,10 @@ function App() {
       text: "External Partners",
       icon: GiAnatomy,
     },
+    {
+      text: "External Partners",
+      icon: GiAnatomy,
+    },
   ];
 
   return (
@@ -55,6 +86,7 @@ function App() {
         borderColor={borderColor}
         leftTopComponent={leftTopComponent}
         leftBottomComponent={leftBottomComponent}
+        leftSideComponents={leftSideComponents}
         rightSideComponents={rightSideComponents}
         MiddleIcon={SiDask}
       />
