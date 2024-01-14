@@ -10,58 +10,59 @@ import { GiAnatomy } from "react-icons/gi";
 
 function App() {
   const heading = "How it Works";
-  const color = "#3D5B2B";
+  const textColor = "#3D5B2B";
   const bgcolor = "#F1F4D9";
   const borderColor = "#3D5B2B";
 
   const middleComponents = {
     icon: SiDask,
-    textColor: "#3D5B65",
-    bgColor: "#000",
-    borderColor: "#fff000",
+    textColor: "#3D5B2B",
+    bgColor: "#F1F4D9",
+    borderColor: "#3D5B2B",
   };
+
   const leftSideComponents = [
     {
       text: "Retailer Data",
       icon: GiIndianPalace,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
     {
       text: "Retailer Data",
       icon: GiIndianPalace,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
     {
       text: "Retailer Data",
       icon: GiIndianPalace,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
     {
       text: "Distributer Data",
       icon: MdSocialDistance,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
     {
       text: "Distributer Data",
       icon: MdSocialDistance,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
     {
       text: "Distributer Data",
       icon: MdSocialDistance,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
   ];
 
@@ -69,44 +70,44 @@ function App() {
     {
       text: "Internal Operations",
       icon: AiOutlineApartment,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
     {
       text: "BI + Reporting",
       icon: SiGooglesearchconsole,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
     {
       text: "Analytics + Data Science",
       icon: SiReacttable,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
     {
       text: "External Partners",
       icon: GiAnatomy,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
     {
       text: "External Partners",
       icon: GiAnatomy,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#367B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
     {
       text: "External Partners",
       icon: GiAnatomy,
-      textColor: "#3D5B65",
-      bgColor: "#365B2B",
-      borderColor: "#362B2B",
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
     },
   ];
 
@@ -114,7 +115,7 @@ function App() {
     <div>
       <DynamicComponent
         heading={heading}
-        color={color}
+        textColor={textColor}
         bgcolor={bgcolor}
         borderColor={borderColor}
         leftSideComponents={leftSideComponents}
