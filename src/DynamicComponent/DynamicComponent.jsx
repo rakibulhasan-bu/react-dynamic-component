@@ -51,11 +51,7 @@ const DynamicComponent = ({
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 249 133"
-                          className={` ${
-                            lengthLeft >= 3
-                              ? "w-[120px] md:w-[150px] lg:w-[150px]  h-[60px] lg:h-[75px]"
-                              : "w-[120px] md:w-[150px] lg:w-[150px]  h-[60px] lg:h-[75px]"
-                          }`}
+                          className={`w-[120px] md:w-[150px] lg:w-[150px]  h-[55px] md:h-[75px] lg:h-[75px]`}
                         >
                           <g
                             fill="none"
@@ -120,53 +116,49 @@ const DynamicComponent = ({
                       </div>
                     </div>
 
-                    {/* <div
-                      className={`absolute bottom-10 ${
-                        lengthLeft >= 3
-                          ? " -right-6 top-[25px] md:right-[-65px]"
-                          : "  -right-6 top-[25px] md:right-[-55px]"
-                      }`}
-                    >
-                      <svg
-                        className={`absolute ${
-                          lengthLeft >= 4
-                            ? "w-8 md:w-14 lg:w-[50px] top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                            : "w-8 md:w-14 lg:w-[53px] h-4 md:h-6 top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                        }`}
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 65 23"
+                    {(lengthLeft === 1 && index === 0) ||
+                    (lengthLeft === 3 && index === 1) ||
+                    (lengthLeft === 5 && index === 2) ? (
+                      <div
+                        className={`absolute bottom-10  -right-[28px] top-2 md:top-[15px] md:right-[-65px]`}
                       >
-                        <path
-                          fill={leftDiv?.borderColor || borderColor}
-                          d="M64.061 12.56a1.502 1.502 0 000-2.121L54.515.893a1.502 1.502 0 00-2.122 0 1.502 1.502 0 000 2.122l8.486 8.485-8.486 8.485a1.502 1.502 0 000 2.122 1.502 1.502 0 002.122 0l9.546-9.546zM0 13h63v-3H0v3z"
-                        ></path>
-                      </svg>
-                    </div> */}
-
-                    <div
-                      className={`absolute bottom-10 ${
-                        lengthLeft >= 3
-                          ? " -right-6 top-[25px] md:right-[-55px]"
-                          : "  -right-6 top-[25px] md:right-[-55px]"
-                      }`}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 59 30"
-                        className={`${
+                        <svg
+                          className={`absolute w-[24px] md:w-14 lg:w-[50px] top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]`}
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 65 23"
+                        >
+                          <path
+                            fill={leftDiv?.borderColor || borderColor}
+                            d="M64.061 12.56a1.502 1.502 0 000-2.121L54.515.893a1.502 1.502 0 00-2.122 0 1.502 1.502 0 000 2.122l8.486 8.485-8.486 8.485a1.502 1.502 0 000 2.122 1.502 1.502 0 002.122 0l9.546-9.546zM0 13h63v-3H0v3z"
+                          ></path>
+                        </svg>
+                      </div>
+                    ) : (
+                      <div
+                        className={`absolute bottom-10 ${
                           lengthLeft >= 3
-                            ? "w-6 md:w-[50px] h-5 md:h-[30px] "
-                            : "w-6 md:w-[50px] h-5 md:h-[30px] "
+                            ? " -right-6 top-[25px] md:right-[-55px]"
+                            : "  -right-6 top-[25px] md:right-[-55px]"
                         }`}
                       >
-                        <path
-                          fill={leftDiv?.borderColor || borderColor}
-                          d="M2.33.264A1.5 1.5 0 101.67 3.19L2.33.264zm55.21 26.84a1.5 1.5 0 001.193-1.755L56.2 12.089a1.501 1.501 0 00-2.947.563l2.25 11.787-11.786 2.25a1.5 1.5 0 10.563 2.948l13.26-2.533zM1.67 3.19l15.28 3.46.662-2.925L2.33.264 1.669 3.19zM43.84 18.329l12.576 8.543 1.686-2.482-12.576-8.543-1.686 2.482zM16.949 6.65A78.838 78.838 0 0143.84 18.329l1.686-2.482A81.864 81.864 0 0017.61 3.725l-.662 2.926z"
-                        ></path>
-                      </svg>
-                    </div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 59 30"
+                          className={`${
+                            lengthLeft >= 3
+                              ? "w-6 md:w-[50px] h-5 md:h-[30px] "
+                              : "w-6 md:w-[50px] h-5 md:h-[30px] "
+                          }`}
+                        >
+                          <path
+                            fill={leftDiv?.borderColor || borderColor}
+                            d="M2.33.264A1.5 1.5 0 101.67 3.19L2.33.264zm55.21 26.84a1.5 1.5 0 001.193-1.755L56.2 12.089a1.501 1.501 0 00-2.947.563l2.25 11.787-11.786 2.25a1.5 1.5 0 10.563 2.948l13.26-2.533zM1.67 3.19l15.28 3.46.662-2.925L2.33.264 1.669 3.19zM43.84 18.329l12.576 8.543 1.686-2.482-12.576-8.543-1.686 2.482zM16.949 6.65A78.838 78.838 0 0143.84 18.329l1.686-2.482A81.864 81.864 0 0017.61 3.725l-.662 2.926z"
+                          ></path>
+                        </svg>
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <div className="flex relative">
@@ -181,11 +173,7 @@ const DynamicComponent = ({
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 253 136"
-                          className={` ${
-                            lengthLeft >= 3
-                              ? "w-[120px] md:w-[150px] lg:w-[150px] h-[60px] lg:h-[75px]"
-                              : "w-[120px] md:w-[150px] lg:w-[150px] h-[60px] lg:h-[75px]"
-                          }`}
+                          className={`w-[120px] md:w-[150px] lg:w-[150px] h-[55px] md:h-[75px] lg:h-[75px]`}
                         >
                           <g
                             fill="none"
@@ -310,11 +298,7 @@ const DynamicComponent = ({
               >
                 {(length === 1 || length === 2) && index === 0 && (
                   <svg
-                    className={`absolute scale-y-[-1] ${
-                      length >= 4
-                        ? "w-8 md:w-14 lg:w-[53px] h-4 md:h-6 top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                        : "w-8 md:w-14 lg:w-[53px] h-4 md:h-6 top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                    }`}
+                    className={`absolute scale-y-[-1] w-6 md:w-14 lg:w-[53px] h-4 md:h-6 top-5 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 65 23"
@@ -328,11 +312,7 @@ const DynamicComponent = ({
 
                 {length >= 4 && index === 0 && (
                   <svg
-                    className={`absolute scale-y-[-1] ${
-                      length >= 4
-                        ? "md:h-7 lg:h-[50px] w-8 md:w-14 lg:w-[53px] top-7 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                        : "md:h-7 lg:h-[50px] w-8 md:w-14 lg:w-[53px] top-7 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                    }`}
+                    className={`absolute scale-y-[-1] md:h-7 lg:h-[50px] w-6 md:w-14 lg:w-[53px] top-7 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 59 30"
                   >
@@ -345,11 +325,7 @@ const DynamicComponent = ({
 
                 {index === 1 && (
                   <svg
-                    className={`absolute scale-y-[-1] ${
-                      length >= 4
-                        ? "w-8 md:w-14 lg:w-[53px] h-4 md:h-6  top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                        : "w-8 md:w-14 lg:w-[53px] h-4 md:h-6  top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                    }`}
+                    className={`absolute scale-y-[-1] w-6 md:w-14 lg:w-[53px] h-4 md:h-6  top-5 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 65 23"
@@ -363,11 +339,7 @@ const DynamicComponent = ({
 
                 {length === 3 && index === 0 && (
                   <svg
-                    className={`absolute scale-y-[-1] ${
-                      length >= 4
-                        ? "h-4 md:h-7 lg:h-[50px] lg:w-[53px] w-8 md:w-14  top-7 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                        : "h-4 md:h-7 lg:h-[50px] lg:w-[53px] w-8 md:w-14  top-7 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                    }`}
+                    className={`absolute scale-y-[-1] h-4 md:h-7 lg:h-[50px] lg:w-[53px] w-6 md:w-14  top-7 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 59 30"
                   >
@@ -380,11 +352,7 @@ const DynamicComponent = ({
 
                 {length > 3 && index === 2 && (
                   <svg
-                    className={`absolute scale-y-[-1] ${
-                      length >= 4
-                        ? "w-8 md:w-14 lg:w-[53px] h-4 md:h-6 top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                        : "w-8 md:w-14 lg:w-[53px] h-4 md:h-6 top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                    }`}
+                    className={`absolute scale-y-[-1] w-6 md:w-14 lg:w-[53px] h-4 md:h-6 top-5 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 65 23"
@@ -398,11 +366,7 @@ const DynamicComponent = ({
 
                 {length === 3 && index === 2 && (
                   <svg
-                    className={`absolute  ${
-                      length >= 4
-                        ? "w-8 md:w-14 lg:w-[53px] h-4 md:h-[50px]  top-0 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                        : "w-8 md:w-14 lg:w-[53px] h-4 md:h-[50px]  top-0 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                    }`}
+                    className={`absolute  w-6 md:w-14 lg:w-[53px] h-4 md:h-[50px]  top-0 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 59 30"
                   >
@@ -415,11 +379,7 @@ const DynamicComponent = ({
 
                 {index === 3 && (
                   <svg
-                    className={`absolute  ${
-                      length >= 4
-                        ? "w-8 md:w-14 lg:w-[53px] h-4 md:h-[50px]  top-0 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                        : "w-8 md:w-14 lg:w-[53px] h-4 md:h-[50px]  top-0 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                    }`}
+                    className={`absolute w-6 md:w-14 lg:w-[53px] h-4 md:h-[50px]  top-0 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 59 30"
                   >
@@ -432,11 +392,7 @@ const DynamicComponent = ({
 
                 {index >= 4 && (
                   <svg
-                    className={`absolute ${
-                      length >= 4
-                        ? "w-8 md:w-14 lg:w-[53px] h-4 md:h-[50px] lg:h-[40px]  top-0 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                        : "w-8 md:w-14 lg:w-[53px] h-4 md:h-[50px] lg:h-[40px]  top-0 z-10 -left-8 md:-left-16 lg:left-[-65px]"
-                    }`}
+                    className={`absolute w-6 md:w-14 lg:w-[53px] h-4 md:h-[50px] lg:h-[40px]  top-0 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 59 30"
                   >
@@ -456,9 +412,7 @@ const DynamicComponent = ({
                 >
                   <Icon
                     style={{ color: singleDiv?.textColor || textColor }}
-                    className={`text-2xl md:text-4xl ${
-                      length >= 5 ? "lg:text-5xl" : "lg:text-6xl"
-                    } `}
+                    className={`text-2xl md:text-4xl lg:text-5xl `}
                   />
                   <div className="text-center ml-1 md:ml-3">
                     <h2
