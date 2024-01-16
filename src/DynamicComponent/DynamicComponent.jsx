@@ -120,6 +120,30 @@ const DynamicComponent = ({
                       </div>
                     </div>
 
+                    {/* <div
+                      className={`absolute bottom-10 ${
+                        lengthLeft >= 3
+                          ? " -right-6 top-[25px] md:right-[-65px]"
+                          : "  -right-6 top-[25px] md:right-[-55px]"
+                      }`}
+                    >
+                      <svg
+                        className={`absolute ${
+                          lengthLeft >= 4
+                            ? "w-8 md:w-14 lg:w-[50px] top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]"
+                            : "w-8 md:w-14 lg:w-[53px] h-4 md:h-6 top-5 z-10 -left-8 md:-left-16 lg:left-[-65px]"
+                        }`}
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 65 23"
+                      >
+                        <path
+                          fill={leftDiv?.borderColor || borderColor}
+                          d="M64.061 12.56a1.502 1.502 0 000-2.121L54.515.893a1.502 1.502 0 00-2.122 0 1.502 1.502 0 000 2.122l8.486 8.485-8.486 8.485a1.502 1.502 0 000 2.122 1.502 1.502 0 002.122 0l9.546-9.546zM0 13h63v-3H0v3z"
+                        ></path>
+                      </svg>
+                    </div> */}
+
                     <div
                       className={`absolute bottom-10 ${
                         lengthLeft >= 3
@@ -138,7 +162,7 @@ const DynamicComponent = ({
                         }`}
                       >
                         <path
-                          fill={leftDiv?.borderColor}
+                          fill={leftDiv?.borderColor || borderColor}
                           d="M2.33.264A1.5 1.5 0 101.67 3.19L2.33.264zm55.21 26.84a1.5 1.5 0 001.193-1.755L56.2 12.089a1.501 1.501 0 00-2.947.563l2.25 11.787-11.786 2.25a1.5 1.5 0 10.563 2.948l13.26-2.533zM1.67 3.19l15.28 3.46.662-2.925L2.33.264 1.669 3.19zM43.84 18.329l12.576 8.543 1.686-2.482-12.576-8.543-1.686 2.482zM16.949 6.65A78.838 78.838 0 0143.84 18.329l1.686-2.482A81.864 81.864 0 0017.61 3.725l-.662 2.926z"
                         ></path>
                       </svg>
@@ -354,7 +378,7 @@ const DynamicComponent = ({
                   </svg>
                 )}
 
-                {index === 2 && (
+                {length > 3 && index === 2 && (
                   <svg
                     className={`absolute scale-y-[-1] ${
                       length >= 4
@@ -368,6 +392,23 @@ const DynamicComponent = ({
                     <path
                       fill={singleDiv?.borderColor || textColor}
                       d="M64.061 12.56a1.502 1.502 0 000-2.121L54.515.893a1.502 1.502 0 00-2.122 0 1.502 1.502 0 000 2.122l8.486 8.485-8.486 8.485a1.502 1.502 0 000 2.122 1.502 1.502 0 002.122 0l9.546-9.546zM0 13h63v-3H0v3z"
+                    ></path>
+                  </svg>
+                )}
+
+                {length === 3 && index === 2 && (
+                  <svg
+                    className={`absolute  ${
+                      length >= 4
+                        ? "w-8 md:w-14 lg:w-[53px] h-4 md:h-[50px]  top-0 z-10 -left-8 md:-left-16 lg:left-[-65px]"
+                        : "w-8 md:w-14 lg:w-[53px] h-4 md:h-[50px]  top-0 z-10 -left-8 md:-left-16 lg:left-[-65px]"
+                    }`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 59 30"
+                  >
+                    <path
+                      fill={singleDiv?.borderColor || textColor}
+                      d="M52.91 24.41q-6.58-4.75-13.86-8.99C27.69 8.79 15.65 6.15 1.88 3.34Q.4 3.04.57 1.55q.02-.18.08-.35Q1.07.09 2.23.32q12.73 2.54 22.33 5.41c11.13 3.32 20.73 9.54 29.9 16.3q.66.49.51-.32l-1.63-8.56q-.28-1.45.98-2.2.21-.13.45-.15 1.16-.12 1.38 1.03l2.54 13.27a1.64 1.64 0 01-1.28 1.91l-13.37 2.78a1.07 1.06-29.7 01-.93-.25q-.57-.52-.57-1.13.01-1.42 1.4-1.69l8.84-1.71q.76-.15.13-.6z"
                     ></path>
                   </svg>
                 )}
