@@ -323,9 +323,22 @@ const DynamicComponent = ({
                   </svg>
                 )}
 
-                {index === 1 && (
+                {length > 4 && index === 1 && (
                   <svg
-                    className={`absolute scale-y-[-1] w-6 md:w-14 lg:w-[53px] h-4 md:h-6  top-5 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
+                    className={`absolute scale-y-[-1] md:h-7 lg:h-[50px] w-6 md:w-14 lg:w-[53px] top-5 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 59 30"
+                  >
+                    <path
+                      fill={singleDiv?.borderColor || textColor}
+                      d="M52.91 24.41q-6.58-4.75-13.86-8.99C27.69 8.79 15.65 6.15 1.88 3.34Q.4 3.04.57 1.55q.02-.18.08-.35Q1.07.09 2.23.32q12.73 2.54 22.33 5.41c11.13 3.32 20.73 9.54 29.9 16.3q.66.49.51-.32l-1.63-8.56q-.28-1.45.98-2.2.21-.13.45-.15 1.16-.12 1.38 1.03l2.54 13.27a1.64 1.64 0 01-1.28 1.91l-13.37 2.78a1.07 1.06-29.7 01-.93-.25q-.57-.52-.57-1.13.01-1.42 1.4-1.69l8.84-1.71q.76-.15.13-.6z"
+                    ></path>
+                  </svg>
+                )}
+
+                {length <= 4 && index === 1 && (
+                  <svg
+                    className={`absolute scale-y-[-1] w-6 md:w-14 lg:w-[53px] h-4 md:h-6  top-6 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 65 23"
@@ -376,8 +389,21 @@ const DynamicComponent = ({
                     ></path>
                   </svg>
                 )}
+                {length === 6 && index === 3 && (
+                  <svg
+                    className={`absolute scale-y-[-1] w-6 md:w-14 lg:w-[53px] h-4 md:h-6  top-[20px] z-10 -left-7 md:-left-16 lg:left-[-65px]`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 65 23"
+                  >
+                    <path
+                      fill={singleDiv?.borderColor || textColor}
+                      d="M64.061 12.56a1.502 1.502 0 000-2.121L54.515.893a1.502 1.502 0 00-2.122 0 1.502 1.502 0 000 2.122l8.486 8.485-8.486 8.485a1.502 1.502 0 000 2.122 1.502 1.502 0 002.122 0l9.546-9.546zM0 13h63v-3H0v3z"
+                    ></path>
+                  </svg>
+                )}
 
-                {index === 3 && (
+                {length <= 5 && index === 3 && (
                   <svg
                     className={`absolute w-6 md:w-14 lg:w-[53px] h-4 md:h-[50px]  top-0 z-10 -left-7 md:-left-16 lg:left-[-65px]`}
                     xmlns="http://www.w3.org/2000/svg"

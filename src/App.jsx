@@ -88,27 +88,27 @@ function App() {
       bgColor: "#F1F4D9",
       borderColor: "#3D5B2B",
     },
-    // {
-    //   text: "External Partners",
-    //   icon: GiAnatomy,
-    //   textColor: "#3D5B2B",
-    //   bgColor: "#F1F4D9",
-    //   borderColor: "#3D5B2B",
-    // },
-    // {
-    //   text: "External Partners",
-    //   icon: GiAnatomy,
-    //   textColor: "#3D5B2B",
-    //   bgColor: "#F1F4D9",
-    //   borderColor: "#3D5B2B",
-    // },
-    // {
-    //   text: "External Partners",
-    //   icon: GiAnatomy,
-    //   textColor: "#3D5B2B",
-    //   bgColor: "#F1F4D9",
-    //   borderColor: "#3D5B2B",
-    // },
+    {
+      text: "External Partners",
+      icon: GiAnatomy,
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
+    },
+    {
+      text: "External Partners",
+      icon: GiAnatomy,
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
+    },
+    {
+      text: "External Partners",
+      icon: GiAnatomy,
+      textColor: "#3D5B2B",
+      bgColor: "#F1F4D9",
+      borderColor: "#3D5B2B",
+    },
   ];
 
   return (
